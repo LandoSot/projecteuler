@@ -32,8 +32,26 @@
       <p class="details">How many different ways can £2 be made using any number of coins?</p>
     </article>
 
-    <h3 id="answer">The answer is:</h3>
+    <h3 id="bruteWay">The answer with Brute Force is:</h3>
 
-    <button type="button" onclick="">Get the Answer</button>
+    <button type="button" onclick="bruteForce()">Get the Answer (Brute Force)</button>
+
+    <script>
+      function bruteForce(){
+        var target  = 200;
+        var ways = 0;
+        
+        for (var a = target; a >= 0; a -= 200)
+            for (var b = a; b >= 0; b -= 100)
+                for (var c = b; c >= 0; c -= 50)
+                    for (var d = c; d >= 0; d -= 20)
+                        for (var e = d; e >= 0; e -= 10)
+                            for (var f = e; f >= 0; f -= 5)
+                                for (var g = f; g >= 0; g -= 2)
+                                    ways++;
+
+        document.getElementById("bruteWay").innerHTML = "The answer with Brute Force is: " + ways;
+      }
+      </script>
   </body>
 </html>
