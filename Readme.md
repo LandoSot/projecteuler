@@ -5,7 +5,7 @@ Project Euler #1
 ---
 ___
 
-###Coin Sums
+### Coin Sums
 In the United Kingdom the currency is made up of pound (£) and pence (p). There are eight coins in general circulation:
 
     1p, 2p, 5p, 10p, 20p, 50p, £1 (100p), and £2 (200p).
