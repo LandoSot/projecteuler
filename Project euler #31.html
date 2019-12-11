@@ -3,15 +3,33 @@
   <head>
     <meta charset="UTF-8">
     <title>Project Euler #31</title>
+
+    <style>
+      .coins{
+        background-color: gray;
+        color: white;
+        margin-left: 20px;
+        width: max-content;
+      }
+      .details{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .title{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        font-style: inherit;
+      }
+    </style>
+    
   </head>
   <body>
-    <p>In the United Kingdom the currency is made up of pound (£) and pence (p). There are eight coins in general circulation:</p>
+    <p class="title">In the United Kingdom the currency is made up of pound (£) and pence (p). There are eight coins in general circulation:</p>
 
     <article>
-      1p, 2p, 5p, 10p, 20p, 50p, £1 (100p), and £2 (200p).<br>
-      <p>It is possible to make £2 in the following way:</p>
-      1×£1 + 1×50p + 2×20p + 1×5p + 1×2p + 3×1p<br>
-      <p>How many different ways can £2 be made using any number of coins?</p>
+      <p class="coins">1p, 2p, 5p, 10p, 20p, 50p, £1 (100p), and £2 (200p).</p>
+      <p class="details">It is possible to make £2 in the following way:</p>
+      <p class="coins">1×£1 + 1×50p + 2×20p + 1×5p + 1×2p + 3×1p.</p>
+      <p class="details">How many different ways can £2 be made using any number of coins?</p>
     </article>
 
     <h3 id="answer">The answer is:</h3>
