@@ -33,8 +33,10 @@
     </article>
 
     <h3 id="bruteWay">The answer with Brute Force is:</h3>
+    <h3 id="recursiveWay">The answer with recursive method is:</h3>
 
     <button type="button" onclick="bruteForce()">Get the Answer (Brute Force)</button>
+    <button type="button" onclick="recursiveMethod(200)">Get the Answer (Recursive Method)</button>
 
     <script>
       function bruteForce(){
@@ -51,6 +53,18 @@
                                     ways++;
 
         document.getElementById("bruteWay").innerHTML = "The answer with Brute Force is: " + ways;
+      }
+
+      function recursiveMethod(target){
+        var coins = [1, 2, 5, 10, 20, 50, 100, 200];
+        var table = new Uint32Array(target + 1);
+        table[0] = 1;
+
+        for (var i = 0; i < coins.length; i++)
+          for (var j = coins[i]; j <= target; j++)
+            table[j]+= table[j - coins[i]];
+
+        document.getElementById("recursiveWay").innerHTML = "The answer with recursive method is: " + table[target];
       }
       </script>
   </body>
